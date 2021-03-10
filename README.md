@@ -1,5 +1,5 @@
-# Hostloc Auto Get Points
-使用 GitHub Actions 自动获取 Hostloc 论坛积分
+# KCJISU Auto Get Traffic
+使用 GitHub Actions 自动获取 KCJISU 流量
 
 ## 使用说明
 
