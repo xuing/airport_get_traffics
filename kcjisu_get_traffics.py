@@ -12,16 +12,14 @@ def login(email, password):
         "sec-fetch-site": "same-origin",
         "x-requested-with": "XMLHttpRequest"
     }
-    login_url = "https://kcjisu.top/auth/login"
+    login_url = "https://kcssr.icu/auth/login"
     login_data = {
         "email": email,
         "passwd": password,
     }
     s = requests.Session()
-    res=s.post(url=login_url, data=login_data, headers=headers)
-    print(res.json())
+    s.post(url=login_url, data=login_data, headers=headers)
     return s
-
 
 def get_traffic(s):
     headers = {
@@ -33,7 +31,7 @@ def get_traffic(s):
         "sec-fetch-site": "same-origin",
         "x-requested-with": "XMLHttpRequest"
     }
-    gourl = "https://kcjisu.top/user/checkin"
+    gourl = "https://kcssr.icu/user/checkin"
     res = s.post(url=gourl, headers=headers,verify=False)
     print(res.json())
 
