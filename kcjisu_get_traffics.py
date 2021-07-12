@@ -12,7 +12,7 @@ def login(email, password):
         "sec-fetch-site": "same-origin",
         "x-requested-with": "XMLHttpRequest"
     }
-    login_url = "https://kcssr.icu/auth/login"
+    login_url = "https://"+os.environ["KCJISU_DOMAIN"]+"/auth/login"
     login_data = {
         "email": email,
         "passwd": password,
@@ -31,7 +31,7 @@ def get_traffic(s):
         "sec-fetch-site": "same-origin",
         "x-requested-with": "XMLHttpRequest"
     }
-    gourl = "https://kcssr.icu/user/checkin"
+    gourl = "https://"+os.environ["KCJISU_DOMAIN"]+"/user/checkin"
     res = s.post(url=gourl, headers=headers,verify=False)
     print(res.json())
 
