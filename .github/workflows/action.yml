@@ -21,4 +21,5 @@ jobs:
       env:
         KCJISU_EMAIL: ${{ secrets.KCJISU_EMAIL }}
         KCJISU_PASSWORD: ${{ secrets.KCJISU_PASSWORD }}
+        KCJISU_DOMAIN: 'kcssr.icu'
       run: python kcjisu_get_traffics.py
