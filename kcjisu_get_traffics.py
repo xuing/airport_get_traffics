@@ -1,5 +1,5 @@
 import os
-import requests
+import cloudscraper
 
 def login(email, password):
     headers = {
@@ -17,7 +17,7 @@ def login(email, password):
         "email": email,
         "passwd": password,
     }
-    s = requests.Session()
+    s = cloudscraper.create_scraper()
     s.post(url=login_url, data=login_data, headers=headers)
     return s
 
