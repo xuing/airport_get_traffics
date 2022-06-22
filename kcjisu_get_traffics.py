@@ -39,8 +39,6 @@ def get_traffic(s):
 if __name__ == "__main__":
     email = os.environ["KCJISU_EMAIL"]
     password = os.environ["KCJISU_PASSWORD"]
-    user_list = email.split(",")
-    passwd_list = password.split(",")
     s = login(email,password)
     get_traffic(s)
     print("******************************")
