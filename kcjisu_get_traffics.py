@@ -33,6 +33,7 @@ def get_traffic(s):
     }
     gourl = "https://"+os.environ["KCJISU_DOMAIN"]+"/user/checkin"
     res = s.post(url=gourl, headers=headers,verify=False)
+    print(res)
     print(res.json())
 
 
