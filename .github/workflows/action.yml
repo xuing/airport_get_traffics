@@ -1,4 +1,4 @@
-name: 'KCJISU Auto Get Traffic'
+name: 'Airport Auto Get Traffic'
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       run: python -m pip install --upgrade cloudscraper
     - name: 'Get traffic'
       env:
-        KCJISU_EMAIL: ${{ secrets.KCJISU_EMAIL }}
-        KCJISU_PASSWORD: ${{ secrets.KCJISU_PASSWORD }}
-        KCJISU_DOMAIN: ${{ secrets.KCJISU_DOMAIN }}
-      run: python kcjisu_get_traffics.py
+        EMAIL: ${{ secrets.EMAIL }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        DOMAIN: ${{ vars.DOMAIN }}
+      run: python airport_get_traffics.py
