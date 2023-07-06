@@ -1,6 +1,7 @@
 name: 'Airport Auto Get Traffic'
 
 on:
+  workflow_dispatch:
   push:
   schedule:
     - cron: '0 17 * * *'
